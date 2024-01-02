@@ -1,0 +1,62 @@
+body {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Garamond, serif;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo escura */
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 60px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: Helvetica, sans-serif;
+}
+
+#controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #0562f7;
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+#downloadAudio {
+  background-color: #2ecc71;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#audioPlayer {
+  margin-top: 20px;
+}

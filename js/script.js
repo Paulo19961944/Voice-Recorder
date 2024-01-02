@@ -20,8 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
         const audioUrl = URL.createObjectURL(audioBlob);
         audioPlayer.src = audioUrl;
-        downloadAudioButton.href = audioUrl;
-        downloadAudioButton.download = 'gravacao_audio.wav';
+
+        // Atualizado para usar um link temporário apenas quando o botão de download é clicado
+        downloadAudioButton.addEventListener('click', () => {
+          const tempLink = document.createElement('a');
+          tempLink.href = audioUrl;
+          tempLink.download = 'gravacao_audio.wav';
+
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          document.body.removeChild(tempLink);
+        });
+
+        downloadAudioButton.disabled = false;
       };
     })
     .catch(error => {
@@ -40,6 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
     mediaRecorder.stop();
     startRecordButton.disabled = false;
     stopRecordButton.disabled = true;
-    downloadAudioButton.disabled = false;
   });
 });

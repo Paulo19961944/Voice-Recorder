@@ -18,7 +18,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
 }
 
 h1 {
@@ -58,4 +57,28 @@ button:disabled {
 
 #audioPlayer {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 490px){
+  .container{
+    width: 225px;
+  }
+
+  h1{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .container{
+    width: 180px;
+  }
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  #audioPlayer{
+    width: 240px;
+  }
 }
